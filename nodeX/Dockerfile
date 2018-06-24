@@ -7,7 +7,7 @@ ARG node_version
 #CMD ["echo","${URL_NODE
 
 RUN apt-get update  && \
-    apt-get install -y curl vim && \
+    apt-get install -y curl vim gnupg && \
     curl -sL "https://deb.nodesource.com/setup_${node_version}.x" | bash - && \
     apt-get install -y nodejs net-tools
 
