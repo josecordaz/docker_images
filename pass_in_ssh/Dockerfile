@@ -6,8 +6,6 @@ RUN apk update \
 
 ARG SSH_PRIVATE_KEY
 ARG SSH_PRIVATE_KEY_PUB
-ENV SSH_PRIVATE_KEY=${SSH_PRIVATE_KEY}
-ENV SSH_PRIVATE_KEY_PUB=${SSH_PRIVATE_KEY_PUB}
 RUN mkdir -p /root/.ssh/
 RUN chmod 700 /root/.ssh/
 RUN echo "${SSH_PRIVATE_KEY}" > /root/.ssh/id_rsa
